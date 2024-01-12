@@ -543,7 +543,7 @@ class HTML2Text(HTMLParser.HTMLParser):
                     nest_count = self.google_nest_count(tag_style)
                 else:
                     nest_count = len(self.list)
-                self.o("  " * nest_count) #TODO: line up <ol><li>s > 9 correctly.
+                self.o("    " * nest_count) #TODO: line up <ol><li>s > 9 correctly.
                 if li['name'] == "ul": self.o(self.ul_item_mark + " ")
                 elif li['name'] == "ol":
                     li['num'] += 1
